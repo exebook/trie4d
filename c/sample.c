@@ -17,7 +17,7 @@ void test(int STEPS, int STEP, int KEYSIZE) {
 	__int64_t key;
 	struct Node *trie = newNode();
 	mem_count = 0;
-	printf("insert/lookup %i key/value pairs, sizeof(key)=%i, sizeof(value)=%i\n", STEPS, KEYSIZE, sizeof(trie->value));
+	printf("insert/lookup %i key/value pairs, sizeof(key)=%i, sizeof(value)=%i\n", STEPS, KEYSIZE, (int)sizeof(trie->value));
 	int T = time1000();
 	key = 0;
 	for (i = 0; i < STEPS; i++) {
