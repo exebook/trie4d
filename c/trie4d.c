@@ -8,7 +8,7 @@ struct Node* newNode() {
 	return node;
 }
 
-int add(struct Node *C, void *key, int count, VALUE_TYPE value) {
+int addNode(struct Node *C, void *key, int count, VALUE_TYPE value) {
 	int pos = 0;
 	struct Node* tmp;
 	while (1) {

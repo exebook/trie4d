@@ -22,7 +22,7 @@ void test(int STEPS, int STEP, int KEYSIZE) {
 	key = 0;
 	for (i = 0; i < STEPS; i++) {
 		key += STEP;
-		add(trie, &key, KEYSIZE, i);
+		addNode(trie, &key, KEYSIZE, i);
 	}
 	printf("insert time:%i\n",time1000() - T); T = time1000();
 	err = 0;

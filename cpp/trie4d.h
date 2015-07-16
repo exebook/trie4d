@@ -1,11 +1,9 @@
 namespace trie4d {
-
 #ifdef TRACE_MEM
 int mem_count;
 #endif
 
 template <typename value_t> class Trie4d {
-
 	struct BitScanner { // separate a key in 4 bit chunks
 		void *p; 
 		int count, pos;
@@ -41,9 +39,7 @@ template <typename value_t> class Trie4d {
 	};
 	
 	Node root;
-	
 public:
-	
 	value_t value;
 	
 	bool add(void *key, int count, value_t value) {

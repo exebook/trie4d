@@ -14,7 +14,7 @@ struct Node {
 };
 
 struct Node* newNode();
-int add(struct Node *C, void *key, int count, VALUE_TYPE value);
+int addNode(struct Node *C, void *key, int count, VALUE_TYPE value);
 struct Node* findNode(struct Node * C, void *key, int count);
 void freeNode(struct Node* C);
 
