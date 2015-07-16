@@ -32,7 +32,7 @@ maybe words) and small number of keys.
 
 ### My original 4-bit Trie.
 
-I come up with amazingly efficient and simple solution
+I come up with a solution
 to slice a key in 4-bit "mini-characters" and thus have
 a bucket of 16 pointer size. Which gives surprisingly good 
 performance, just a bit slower than trie-256 on lookup,
