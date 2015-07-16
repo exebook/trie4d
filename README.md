@@ -15,7 +15,20 @@ for next characters.
 
 Since this bucket is so big (256*sizeof(pointer)), another
 structure is often used to hold it, (like linked list). Which
-makes efficient trie a complex amount of code.
+makes efficient trie a complex piece of code.
+
+### Binary trie.
+
+There also are binary-tries, they have a node for each bit of a key.
+I experimented with *binary tries* and found them inneficient since
+they allocate a node for every bit, and have to do a pointer
+dereference for each bit of a key, with causes a cache miss on 
+each step.
+
+My small experiments show that *binary tries* are very slow
+compared for 8-bit or 4-bit *tries*. They might have their place
+under the sun for starage with very short keys (not strings,
+maybe words) and small number of keys.
 
 ### My original 4-bit Trie.
 
@@ -40,19 +53,6 @@ So, overall, trie4d performs good even compared to best hash tables
 and that's under 100 lines of code, which makes it a good choice
 for a dictionary structure for some applications (think of your
 toy programming language, etc.).
-
-### Binary trie.
-
-There also are binary-tries, they have a node for each bit of a key.
-I experimented with *binary tries* and found them inneficient since
-they allocate a node for every bit, and have to do a pointer
-dereference for each bit of a key, with causes a cache miss on 
-each step.
-
-My small experiments show that *binary tries* are very slow
-compared for 8-bit or 4-bit *tries*. They might have their place
-under the sun for starage with very short keys (not strings,
-maybe words) and small number of keys.
 
 ### Advantages of trie4d.
 
