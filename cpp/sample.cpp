@@ -37,7 +37,8 @@ void test(int STEPS, int KEYMOD, int KEYSIZE, int reads) {
 		key = 0;
 		for (int i = 0; i < STEPS; i++) {
 			key += KEYMOD;
-			trie.add(&key, KEYSIZE, i);
+			bool existed = trie.add(&key, KEYSIZE);
+			*trie.result = i;
 		}
 		cout << "insertion: " << time1000() - Timer << " ms" << endl;
 		
@@ -46,8 +47,8 @@ void test(int STEPS, int KEYMOD, int KEYSIZE, int reads) {
 			key = err = 0;
 			for (int i = 0; i < STEPS; i++) {
 				key += KEYMOD;
-				bool ok = trie.findNode(&key, KEYSIZE);
-				if (!ok || trie.value != i) err++;
+				bool ok = trie.find(&key, KEYSIZE);
+				if (!ok || *trie.result != i) err++;
 			}
 		}
 		cout

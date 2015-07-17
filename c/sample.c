@@ -41,6 +41,6 @@ void test(int STEPS, int STEP, int KEYSIZE) {
 }
 
 int main() {
-	test(65535, 100, 3);
-	test(1000000, 500000000, 8);
+//	test(65535, 100, 3);
+	test(100000, 500000000, 8);
 }

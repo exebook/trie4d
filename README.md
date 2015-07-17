@@ -75,3 +75,12 @@ sophisticated automation.
 But trie4d just works, performing only 1-3 times slower than best hash
 implementations out there. And that's in 50-100 lines of code.
 
+### Usage
+```cpp
+bool trie.add(void *key, int count)
+bool trie.find(void *key, int count)
+```
+
+Both return true if the key was already in the trie.
+To read or write the value of the added/found node use `*trie.result`.
+
