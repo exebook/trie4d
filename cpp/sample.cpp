@@ -1,7 +1,7 @@
 #include <iostream>
 #include "sys/time.h"
 #define TRACE_MEM
-#include "trie4d.h"
+#include "trie5d.h"
 
 using namespace std;
 
