@@ -1,5 +1,10 @@
 #include "trie4d.h"
 
+#ifdef DEBUG
+/* this will count upon destruction, how much memory was used */
+int mem_count = 0;
+#endif
+
 struct Node* newNode() {
 	struct Node *node;
 	node = malloc(sizeof (struct Node));
@@ -8,7 +13,7 @@ struct Node* newNode() {
 	return node;
 }
 
-int addNode(struct Node *C, void *key, int count, VALUE_TYPE value) {
+int addNode(struct Node *C, void *key, int count, TRIE4D_VALUE_TYPE value) {
 	int pos = 0;
 	struct Node* tmp;
 	while (1) {
@@ -72,11 +77,6 @@ struct Node* findNode(struct Node * C, void *key, int count) {
 		}
 	}
 }
-
-#ifdef DEBUG
-/* this will count upon destruction, how much memory was used */
-int mem_count = 0;
-#endif
 
 void freeNode(struct Node* C) {
 	int i;
