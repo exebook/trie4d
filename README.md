@@ -1,6 +1,6 @@
 #trie4d
 
-##4-bit trie (Prefix tree) with deferred alloc.
+##4-bit trie (Prefix tree) with deferred alloc, cache aware, zero-dependency, very fast and small (100 LOC).
 
 Trie is a sort of dictionary, or key/value storage. Think
 of hash tables, binary trees red-black trees, splay trees,

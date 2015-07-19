@@ -17,10 +17,10 @@ int addNode(struct Node *C, void *key, int count, VALUE_TYPE value) {
 		if (bpos >= count) {
 			if (C->value == -1) {
 				C->value = value;
-				return 1; // value added
+				return 1; /* value added */
 			}
 			C->value = value;
-			return 0; // value replaced
+			return 0; /* value replaced */
 		}
 		unsigned char b = ((unsigned char*)key)[bpos];
 		if (pos++ & 1) u = (b >>= 4);
@@ -74,6 +74,7 @@ struct Node* findNode(struct Node * C, void *key, int count) {
 }
 
 #ifdef DEBUG
+/* this will count upon destruction, how much memory was used */
 int mem_count = 0;
 #endif
 
