@@ -54,6 +54,10 @@ and that's under 100 lines of code, which makes it a good choice
 for a dictionary structure for some applications (think of your
 toy programming language, etc.).
 
+## Succint data sctructures
+
+Of course, next step in memory optimization is to use RANGE/SELECT based succint data structures. But although they give great memory usage reduction, they are also very much slower. But I want to do more tests to see how much slower exactly. 
+
 ### Advantages of trie4d.
 
 As every trie it has insert/lookup time O(K) where K is the length
